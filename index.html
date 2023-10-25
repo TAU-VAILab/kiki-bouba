@@ -1,9 +1,852 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Coming soon</title>
-  </head>
-  <body>
-    Coming soon
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="web/style.css">
+  <title>Kiki or Bouba? Sound Symbolism in Vision-and-Language Models</title>
+</head>
+
+<body class="container" style="max-width:840px">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+  <!-- heading -->
+  <div>
+
+    <!-- title -->
+    <div class='row mt-5 mb-3'>
+      <div class='col text-center'>
+        <p class="h2 font-weight-normal">Kiki or Bouba?<br />Sound Symbolism in Vision-and-Language Models</p>
+      </div>
+    </div>
+
+    <!-- authors -->
+    <div class="col text-center h6 font-weight-bold mb-2 ">
+      <span><a class="col-md-4 col-xs-6 pb-2" href="https://morrisalp.github.io/">Morris Alper</a></span>
+      <span><a class="col-md-4 col-xs-6 pb-2" href="https://www.elor.sites.tau.ac.il/">Hadar
+          Averbuch-Elor</a></span>
+    </div>
+
+    <!-- affiliations -->
+    <div class='row mb-1'>
+      <div class='col text-center'>
+        <p class="h6">
+          <a href="https://english.tau.ac.il/"><span>Tel Aviv University</span></a>
+        </p>
+      </div>
+    </div>
+
+    <div class='row mt-2 mb-3'>
+      <div class='col text-center'>
+        <p class="h3 font-weight-normal">NeurIPS 2023 <small>✨SPOTLIGHT✨</small></p>
+        <!-- <p class="h6 font-weight-normal">(top XX% of accepted papers)</p> -->
+        <!-- <sup class="fa fa-info-circle" ></sup> -->
+      </div>
+    </div>
+
+
+    <!-- links -->
+    <div class='row mb-4'>
+      <div class='col text-center'>
+        <a href="#" target="_blank" class="btn btn-outline-primary" role="button">
+          <i class="ai ai-arxiv"></i>
+          arXiv
+        </a>
+        <a href="https://github.com/TAU-VAILab/kiki-bouba" target="_blank" class="btn btn-outline-primary"
+          role="button">
+          <i class="fa fa-github"></i>
+          Code
+        </a>
+        <a href="#gallery" class="btn btn-outline-primary" role="button">
+          <i class="fa fa-picture-o"></i>
+          Gallery
+        </a>
+      </div>
+    </div>
+
+    <!-- teaser -->
+    <div class='row justify-content-center'>
+
+      <div class="card teaser teaser_img_card">
+        <img src="assets/bouba3.jpg" class="img-fluid rounded mx-auto d-block teaser_img">
+        <p class="teaser_desc">bouba</p>
+      </div>
+      <div class="card teaser teaser_img_card">
+        <img src="assets/kiki3.jpg" class="img-fluid rounded mx-auto d-block teaser_img">
+        <p class="teaser_desc">kiki</p>
+      </div>
+      <div class="card teaser teaser_img_card">
+        <img src="assets/bouba2.jpg" class="img-fluid rounded mx-auto d-block teaser_img">
+        <p class="teaser_desc">bouba</p>
+      </div>
+      <div class="card teaser teaser_img_card">
+        <img src="assets/kiki2.jpg" class="img-fluid rounded mx-auto d-block teaser_img">
+        <p class="teaser_desc">kiki</p>
+      </div>
+      <div class="card teaser teaser_img_card">
+        <img src="assets/kiki1.jpg" class="img-fluid rounded mx-auto d-block teaser_img">
+        <p class="teaser_desc">kiki</p>
+      </div>
+      <div class="card teaser teaser_img_card">
+        <img src="assets/bouba1.jpg" class="img-fluid rounded mx-auto d-block teaser_img">
+        <p class="teaser_desc">bouba</p>
+      </div>
+
+
+
+      <div class='text-center col-md-12 col-sm-12 col-xs-12 align-middle mt-1'>
+        <p class='h6'>
+          <em>
+            Text-to-image generations from prompts with "kiki" or "bouba".
+            <br>
+            Which images were generated with "kiki" and which with "bouba"?
+            <br>
+            (Hover to see the answers.)
+          </em>
+        </p>
+      </div>
+
+      <div class='col-md-12 col-sm-12 col-xs-12 align-middle mt-1'>
+        <p class="text-break">
+          Psychological experiments have shown that humans tend to associate certain speech sounds with certain visual
+          shapes.
+          We ask: What about AI models for tasks like text-to-image generation?
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- abstract -->
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <p class="h4 font-weight-bold title">Abstract</p>
+      <p class="abstract"><!--style="line-height: 1;">-->
+        Although the mapping between sound and meaning in human language is assumed to be largely arbitrary, research
+        in cognitive science has shown that there are non-trivial correlations between particular sounds and meanings
+        across languages and demographic groups, a phenomenon known as <b>sound symbolism</b>. Among the many
+        dimensions of meaning, sound symbolism is particularly salient and well-demonstrated with regards to
+        cross-modal associations between language and the visual domain. In this work, we address the question of
+        whether sound symbolism is reflected in vision-and-language models such as CLIP and Stable Diffusion. Using
+        zero-shot knowledge probing to investigate the inherent knowledge of these models, we find strong evidence
+        that they do show this pattern, paralleling the well-known <b>kiki–bouba effect</b> in psycholinguistics. Our
+        work provides a novel method for demonstrating sound symbolism and understanding its nature using
+        computational tools.
+      </p>
+    </div>
+  </div>
+
+  <!-- gallery -->
+  <div>
+    <hr>
+    <div class="row" id="gallery">
+      <div class='col-md-12 col-sm-12 col-xs-12'>
+        <p class='h4 font-weight-bold title'>Pseudoword Image Gallery</p>
+        <p class="gall-text">
+          Select a pseudoword to see corresponding image generations from Stable Diffusion.
+          Images are generated with the prompt <span class="prompt">&ldquo;a 3D rendering of a &lt;w&gt; shaped
+            object&rdquo;</span>,
+          with the pseudoword inserted in the slot <span class="prompt">&lt;w&gt;</span>.
+          Pseudowords containing &ldquo;sharp&rdquo; or &ldquo;round&rdquo;-associated sounds are indicated with the
+          symbols ☆ and ◯.
+        </p>
+        <select id="gall-select" class="custom-select custom-select-lg mb-3">
+          <option selected value="none">Select a pseudoword</option>
+          <option value="bababa">◯ bababa</option>
+          <option value="baboba">◯ baboba</option>
+          <option value="babuba">◯ babuba</option>
+          <option value="badaba">◯ badaba</option>
+          <option value="badoba">◯ badoba</option>
+          <option value="baduba">◯ baduba</option>
+          <option value="bagaba">◯ bagaba</option>
+          <option value="bagoba">◯ bagoba</option>
+          <option value="baguba">◯ baguba</option>
+          <option value="balaba">◯ balaba</option>
+          <option value="baloba">◯ baloba</option>
+          <option value="baluba">◯ baluba</option>
+          <option value="bamaba">◯ bamaba</option>
+          <option value="bamoba">◯ bamoba</option>
+          <option value="bamuba">◯ bamuba</option>
+          <option value="banaba">◯ banaba</option>
+          <option value="banoba">◯ banoba</option>
+          <option value="banuba">◯ banuba</option>
+          <option value="bobabo">◯ bobabo</option>
+          <option value="bobobo">◯ bobobo</option>
+          <option value="bobubo">◯ bobubo</option>
+          <option value="bodabo">◯ bodabo</option>
+          <option value="bodobo">◯ bodobo</option>
+          <option value="bodubo">◯ bodubo</option>
+          <option value="bogabo">◯ bogabo</option>
+          <option value="bogobo">◯ bogobo</option>
+          <option value="bogubo">◯ bogubo</option>
+          <option value="bolabo">◯ bolabo</option>
+          <option value="bolobo">◯ bolobo</option>
+          <option value="bolubo">◯ bolubo</option>
+          <option value="bomabo">◯ bomabo</option>
+          <option value="bomobo">◯ bomobo</option>
+          <option value="bomubo">◯ bomubo</option>
+          <option value="bonabo">◯ bonabo</option>
+          <option value="bonobo">◯ bonobo</option>
+          <option value="bonubo">◯ bonubo</option>
+          <option value="bubabu">◯ bubabu</option>
+          <option value="bubobu">◯ bubobu</option>
+          <option value="bububu">◯ bububu</option>
+          <option value="budabu">◯ budabu</option>
+          <option value="budobu">◯ budobu</option>
+          <option value="budubu">◯ budubu</option>
+          <option value="bugabu">◯ bugabu</option>
+          <option value="bugobu">◯ bugobu</option>
+          <option value="bugubu">◯ bugubu</option>
+          <option value="bulabu">◯ bulabu</option>
+          <option value="bulobu">◯ bulobu</option>
+          <option value="bulubu">◯ bulubu</option>
+          <option value="bumabu">◯ bumabu</option>
+          <option value="bumobu">◯ bumobu</option>
+          <option value="bumubu">◯ bumubu</option>
+          <option value="bunabu">◯ bunabu</option>
+          <option value="bunobu">◯ bunobu</option>
+          <option value="bunubu">◯ bunubu</option>
+          <option value="dabada">◯ dabada</option>
+          <option value="daboda">◯ daboda</option>
+          <option value="dabuda">◯ dabuda</option>
+          <option value="dadada">◯ dadada</option>
+          <option value="dadoda">◯ dadoda</option>
+          <option value="daduda">◯ daduda</option>
+          <option value="dagada">◯ dagada</option>
+          <option value="dagoda">◯ dagoda</option>
+          <option value="daguda">◯ daguda</option>
+          <option value="dalada">◯ dalada</option>
+          <option value="daloda">◯ daloda</option>
+          <option value="daluda">◯ daluda</option>
+          <option value="damada">◯ damada</option>
+          <option value="damoda">◯ damoda</option>
+          <option value="damuda">◯ damuda</option>
+          <option value="danada">◯ danada</option>
+          <option value="danoda">◯ danoda</option>
+          <option value="danuda">◯ danuda</option>
+          <option value="dobado">◯ dobado</option>
+          <option value="dobodo">◯ dobodo</option>
+          <option value="dobudo">◯ dobudo</option>
+          <option value="dodado">◯ dodado</option>
+          <option value="dododo">◯ dododo</option>
+          <option value="dodudo">◯ dodudo</option>
+          <option value="dogado">◯ dogado</option>
+          <option value="dogodo">◯ dogodo</option>
+          <option value="dogudo">◯ dogudo</option>
+          <option value="dolado">◯ dolado</option>
+          <option value="dolodo">◯ dolodo</option>
+          <option value="doludo">◯ doludo</option>
+          <option value="domado">◯ domado</option>
+          <option value="domodo">◯ domodo</option>
+          <option value="domudo">◯ domudo</option>
+          <option value="donado">◯ donado</option>
+          <option value="donodo">◯ donodo</option>
+          <option value="donudo">◯ donudo</option>
+          <option value="dubadu">◯ dubadu</option>
+          <option value="dubodu">◯ dubodu</option>
+          <option value="dubudu">◯ dubudu</option>
+          <option value="dudadu">◯ dudadu</option>
+          <option value="dudodu">◯ dudodu</option>
+          <option value="dududu">◯ dududu</option>
+          <option value="dugadu">◯ dugadu</option>
+          <option value="dugodu">◯ dugodu</option>
+          <option value="dugudu">◯ dugudu</option>
+          <option value="duladu">◯ duladu</option>
+          <option value="dulodu">◯ dulodu</option>
+          <option value="duludu">◯ duludu</option>
+          <option value="dumadu">◯ dumadu</option>
+          <option value="dumodu">◯ dumodu</option>
+          <option value="dumudu">◯ dumudu</option>
+          <option value="dunadu">◯ dunadu</option>
+          <option value="dunodu">◯ dunodu</option>
+          <option value="dunudu">◯ dunudu</option>
+          <option value="gabaga">◯ gabaga</option>
+          <option value="gaboga">◯ gaboga</option>
+          <option value="gabuga">◯ gabuga</option>
+          <option value="gadaga">◯ gadaga</option>
+          <option value="gadoga">◯ gadoga</option>
+          <option value="gaduga">◯ gaduga</option>
+          <option value="gagaga">◯ gagaga</option>
+          <option value="gagoga">◯ gagoga</option>
+          <option value="gaguga">◯ gaguga</option>
+          <option value="galaga">◯ galaga</option>
+          <option value="galoga">◯ galoga</option>
+          <option value="galuga">◯ galuga</option>
+          <option value="gamaga">◯ gamaga</option>
+          <option value="gamoga">◯ gamoga</option>
+          <option value="gamuga">◯ gamuga</option>
+          <option value="ganaga">◯ ganaga</option>
+          <option value="ganoga">◯ ganoga</option>
+          <option value="ganuga">◯ ganuga</option>
+          <option value="gobago">◯ gobago</option>
+          <option value="gobogo">◯ gobogo</option>
+          <option value="gobugo">◯ gobugo</option>
+          <option value="godago">◯ godago</option>
+          <option value="godogo">◯ godogo</option>
+          <option value="godugo">◯ godugo</option>
+          <option value="gogago">◯ gogago</option>
+          <option value="gogogo">◯ gogogo</option>
+          <option value="gogugo">◯ gogugo</option>
+          <option value="golago">◯ golago</option>
+          <option value="gologo">◯ gologo</option>
+          <option value="golugo">◯ golugo</option>
+          <option value="gomago">◯ gomago</option>
+          <option value="gomogo">◯ gomogo</option>
+          <option value="gomugo">◯ gomugo</option>
+          <option value="gonago">◯ gonago</option>
+          <option value="gonogo">◯ gonogo</option>
+          <option value="gonugo">◯ gonugo</option>
+          <option value="gubagu">◯ gubagu</option>
+          <option value="gubogu">◯ gubogu</option>
+          <option value="gubugu">◯ gubugu</option>
+          <option value="gudagu">◯ gudagu</option>
+          <option value="gudogu">◯ gudogu</option>
+          <option value="gudugu">◯ gudugu</option>
+          <option value="gugagu">◯ gugagu</option>
+          <option value="gugogu">◯ gugogu</option>
+          <option value="gugugu">◯ gugugu</option>
+          <option value="gulagu">◯ gulagu</option>
+          <option value="gulogu">◯ gulogu</option>
+          <option value="gulugu">◯ gulugu</option>
+          <option value="gumagu">◯ gumagu</option>
+          <option value="gumogu">◯ gumogu</option>
+          <option value="gumugu">◯ gumugu</option>
+          <option value="gunagu">◯ gunagu</option>
+          <option value="gunogu">◯ gunogu</option>
+          <option value="gunugu">◯ gunugu</option>
+          <option value="hahaha">☆ hahaha</option>
+          <option value="haheha">☆ haheha</option>
+          <option value="hahiha">☆ hahiha</option>
+          <option value="hakaha">☆ hakaha</option>
+          <option value="hakeha">☆ hakeha</option>
+          <option value="hakiha">☆ hakiha</option>
+          <option value="hapaha">☆ hapaha</option>
+          <option value="hapeha">☆ hapeha</option>
+          <option value="hapiha">☆ hapiha</option>
+          <option value="hasaha">☆ hasaha</option>
+          <option value="haseha">☆ haseha</option>
+          <option value="hasiha">☆ hasiha</option>
+          <option value="hataha">☆ hataha</option>
+          <option value="hateha">☆ hateha</option>
+          <option value="hatiha">☆ hatiha</option>
+          <option value="haxaha">☆ haxaha</option>
+          <option value="haxeha">☆ haxeha</option>
+          <option value="haxiha">☆ haxiha</option>
+          <option value="hehahe">☆ hehahe</option>
+          <option value="hehehe">☆ hehehe</option>
+          <option value="hehihe">☆ hehihe</option>
+          <option value="hekahe">☆ hekahe</option>
+          <option value="hekehe">☆ hekehe</option>
+          <option value="hekihe">☆ hekihe</option>
+          <option value="hepahe">☆ hepahe</option>
+          <option value="hepehe">☆ hepehe</option>
+          <option value="hepihe">☆ hepihe</option>
+          <option value="hesahe">☆ hesahe</option>
+          <option value="hesehe">☆ hesehe</option>
+          <option value="hesihe">☆ hesihe</option>
+          <option value="hetahe">☆ hetahe</option>
+          <option value="hetehe">☆ hetehe</option>
+          <option value="hetihe">☆ hetihe</option>
+          <option value="hexahe">☆ hexahe</option>
+          <option value="hexehe">☆ hexehe</option>
+          <option value="hexihe">☆ hexihe</option>
+          <option value="hihahi">☆ hihahi</option>
+          <option value="hihehi">☆ hihehi</option>
+          <option value="hihihi">☆ hihihi</option>
+          <option value="hikahi">☆ hikahi</option>
+          <option value="hikehi">☆ hikehi</option>
+          <option value="hikihi">☆ hikihi</option>
+          <option value="hipahi">☆ hipahi</option>
+          <option value="hipehi">☆ hipehi</option>
+          <option value="hipihi">☆ hipihi</option>
+          <option value="hisahi">☆ hisahi</option>
+          <option value="hisehi">☆ hisehi</option>
+          <option value="hisihi">☆ hisihi</option>
+          <option value="hitahi">☆ hitahi</option>
+          <option value="hitehi">☆ hitehi</option>
+          <option value="hitihi">☆ hitihi</option>
+          <option value="hixahi">☆ hixahi</option>
+          <option value="hixehi">☆ hixehi</option>
+          <option value="hixihi">☆ hixihi</option>
+          <option value="kahaka">☆ kahaka</option>
+          <option value="kaheka">☆ kaheka</option>
+          <option value="kahika">☆ kahika</option>
+          <option value="kakaka">☆ kakaka</option>
+          <option value="kakeka">☆ kakeka</option>
+          <option value="kakika">☆ kakika</option>
+          <option value="kapaka">☆ kapaka</option>
+          <option value="kapeka">☆ kapeka</option>
+          <option value="kapika">☆ kapika</option>
+          <option value="kasaka">☆ kasaka</option>
+          <option value="kaseka">☆ kaseka</option>
+          <option value="kasika">☆ kasika</option>
+          <option value="kataka">☆ kataka</option>
+          <option value="kateka">☆ kateka</option>
+          <option value="katika">☆ katika</option>
+          <option value="kaxaka">☆ kaxaka</option>
+          <option value="kaxeka">☆ kaxeka</option>
+          <option value="kaxika">☆ kaxika</option>
+          <option value="kehake">☆ kehake</option>
+          <option value="keheke">☆ keheke</option>
+          <option value="kehike">☆ kehike</option>
+          <option value="kekake">☆ kekake</option>
+          <option value="kekeke">☆ kekeke</option>
+          <option value="kekike">☆ kekike</option>
+          <option value="kepake">☆ kepake</option>
+          <option value="kepeke">☆ kepeke</option>
+          <option value="kepike">☆ kepike</option>
+          <option value="kesake">☆ kesake</option>
+          <option value="keseke">☆ keseke</option>
+          <option value="kesike">☆ kesike</option>
+          <option value="ketake">☆ ketake</option>
+          <option value="keteke">☆ keteke</option>
+          <option value="ketike">☆ ketike</option>
+          <option value="kexake">☆ kexake</option>
+          <option value="kexeke">☆ kexeke</option>
+          <option value="kexike">☆ kexike</option>
+          <option value="kihaki">☆ kihaki</option>
+          <option value="kiheki">☆ kiheki</option>
+          <option value="kihiki">☆ kihiki</option>
+          <option value="kikaki">☆ kikaki</option>
+          <option value="kikeki">☆ kikeki</option>
+          <option value="kikiki">☆ kikiki</option>
+          <option value="kipaki">☆ kipaki</option>
+          <option value="kipeki">☆ kipeki</option>
+          <option value="kipiki">☆ kipiki</option>
+          <option value="kisaki">☆ kisaki</option>
+          <option value="kiseki">☆ kiseki</option>
+          <option value="kisiki">☆ kisiki</option>
+          <option value="kitaki">☆ kitaki</option>
+          <option value="kiteki">☆ kiteki</option>
+          <option value="kitiki">☆ kitiki</option>
+          <option value="kixaki">☆ kixaki</option>
+          <option value="kixeki">☆ kixeki</option>
+          <option value="kixiki">☆ kixiki</option>
+          <option value="labala">◯ labala</option>
+          <option value="labola">◯ labola</option>
+          <option value="labula">◯ labula</option>
+          <option value="ladala">◯ ladala</option>
+          <option value="ladola">◯ ladola</option>
+          <option value="ladula">◯ ladula</option>
+          <option value="lagala">◯ lagala</option>
+          <option value="lagola">◯ lagola</option>
+          <option value="lagula">◯ lagula</option>
+          <option value="lalala">◯ lalala</option>
+          <option value="lalola">◯ lalola</option>
+          <option value="lalula">◯ lalula</option>
+          <option value="lamala">◯ lamala</option>
+          <option value="lamola">◯ lamola</option>
+          <option value="lamula">◯ lamula</option>
+          <option value="lanala">◯ lanala</option>
+          <option value="lanola">◯ lanola</option>
+          <option value="lanula">◯ lanula</option>
+          <option value="lobalo">◯ lobalo</option>
+          <option value="lobolo">◯ lobolo</option>
+          <option value="lobulo">◯ lobulo</option>
+          <option value="lodalo">◯ lodalo</option>
+          <option value="lodolo">◯ lodolo</option>
+          <option value="lodulo">◯ lodulo</option>
+          <option value="logalo">◯ logalo</option>
+          <option value="logolo">◯ logolo</option>
+          <option value="logulo">◯ logulo</option>
+          <option value="lolalo">◯ lolalo</option>
+          <option value="lololo">◯ lololo</option>
+          <option value="lolulo">◯ lolulo</option>
+          <option value="lomalo">◯ lomalo</option>
+          <option value="lomolo">◯ lomolo</option>
+          <option value="lomulo">◯ lomulo</option>
+          <option value="lonalo">◯ lonalo</option>
+          <option value="lonolo">◯ lonolo</option>
+          <option value="lonulo">◯ lonulo</option>
+          <option value="lubalu">◯ lubalu</option>
+          <option value="lubolu">◯ lubolu</option>
+          <option value="lubulu">◯ lubulu</option>
+          <option value="ludalu">◯ ludalu</option>
+          <option value="ludolu">◯ ludolu</option>
+          <option value="ludulu">◯ ludulu</option>
+          <option value="lugalu">◯ lugalu</option>
+          <option value="lugolu">◯ lugolu</option>
+          <option value="lugulu">◯ lugulu</option>
+          <option value="lulalu">◯ lulalu</option>
+          <option value="lulolu">◯ lulolu</option>
+          <option value="lululu">◯ lululu</option>
+          <option value="lumalu">◯ lumalu</option>
+          <option value="lumolu">◯ lumolu</option>
+          <option value="lumulu">◯ lumulu</option>
+          <option value="lunalu">◯ lunalu</option>
+          <option value="lunolu">◯ lunolu</option>
+          <option value="lunulu">◯ lunulu</option>
+          <option value="mabama">◯ mabama</option>
+          <option value="maboma">◯ maboma</option>
+          <option value="mabuma">◯ mabuma</option>
+          <option value="madama">◯ madama</option>
+          <option value="madoma">◯ madoma</option>
+          <option value="maduma">◯ maduma</option>
+          <option value="magama">◯ magama</option>
+          <option value="magoma">◯ magoma</option>
+          <option value="maguma">◯ maguma</option>
+          <option value="malama">◯ malama</option>
+          <option value="maloma">◯ maloma</option>
+          <option value="maluma">◯ maluma</option>
+          <option value="mamama">◯ mamama</option>
+          <option value="mamoma">◯ mamoma</option>
+          <option value="mamuma">◯ mamuma</option>
+          <option value="manama">◯ manama</option>
+          <option value="manoma">◯ manoma</option>
+          <option value="manuma">◯ manuma</option>
+          <option value="mobamo">◯ mobamo</option>
+          <option value="mobomo">◯ mobomo</option>
+          <option value="mobumo">◯ mobumo</option>
+          <option value="modamo">◯ modamo</option>
+          <option value="modomo">◯ modomo</option>
+          <option value="modumo">◯ modumo</option>
+          <option value="mogamo">◯ mogamo</option>
+          <option value="mogomo">◯ mogomo</option>
+          <option value="mogumo">◯ mogumo</option>
+          <option value="molamo">◯ molamo</option>
+          <option value="molomo">◯ molomo</option>
+          <option value="molumo">◯ molumo</option>
+          <option value="momamo">◯ momamo</option>
+          <option value="momomo">◯ momomo</option>
+          <option value="momumo">◯ momumo</option>
+          <option value="monamo">◯ monamo</option>
+          <option value="monomo">◯ monomo</option>
+          <option value="monumo">◯ monumo</option>
+          <option value="mubamu">◯ mubamu</option>
+          <option value="mubomu">◯ mubomu</option>
+          <option value="mubumu">◯ mubumu</option>
+          <option value="mudamu">◯ mudamu</option>
+          <option value="mudomu">◯ mudomu</option>
+          <option value="mudumu">◯ mudumu</option>
+          <option value="mugamu">◯ mugamu</option>
+          <option value="mugomu">◯ mugomu</option>
+          <option value="mugumu">◯ mugumu</option>
+          <option value="mulamu">◯ mulamu</option>
+          <option value="mulomu">◯ mulomu</option>
+          <option value="mulumu">◯ mulumu</option>
+          <option value="mumamu">◯ mumamu</option>
+          <option value="mumomu">◯ mumomu</option>
+          <option value="mumumu">◯ mumumu</option>
+          <option value="munamu">◯ munamu</option>
+          <option value="munomu">◯ munomu</option>
+          <option value="munumu">◯ munumu</option>
+          <option value="nabana">◯ nabana</option>
+          <option value="nabona">◯ nabona</option>
+          <option value="nabuna">◯ nabuna</option>
+          <option value="nadana">◯ nadana</option>
+          <option value="nadona">◯ nadona</option>
+          <option value="naduna">◯ naduna</option>
+          <option value="nagana">◯ nagana</option>
+          <option value="nagona">◯ nagona</option>
+          <option value="naguna">◯ naguna</option>
+          <option value="nalana">◯ nalana</option>
+          <option value="nalona">◯ nalona</option>
+          <option value="naluna">◯ naluna</option>
+          <option value="namana">◯ namana</option>
+          <option value="namona">◯ namona</option>
+          <option value="namuna">◯ namuna</option>
+          <option value="nanana">◯ nanana</option>
+          <option value="nanona">◯ nanona</option>
+          <option value="nanuna">◯ nanuna</option>
+          <option value="nobano">◯ nobano</option>
+          <option value="nobono">◯ nobono</option>
+          <option value="nobuno">◯ nobuno</option>
+          <option value="nodano">◯ nodano</option>
+          <option value="nodono">◯ nodono</option>
+          <option value="noduno">◯ noduno</option>
+          <option value="nogano">◯ nogano</option>
+          <option value="nogono">◯ nogono</option>
+          <option value="noguno">◯ noguno</option>
+          <option value="nolano">◯ nolano</option>
+          <option value="nolono">◯ nolono</option>
+          <option value="noluno">◯ noluno</option>
+          <option value="nomano">◯ nomano</option>
+          <option value="nomono">◯ nomono</option>
+          <option value="nomuno">◯ nomuno</option>
+          <option value="nonano">◯ nonano</option>
+          <option value="nonono">◯ nonono</option>
+          <option value="nonuno">◯ nonuno</option>
+          <option value="nubanu">◯ nubanu</option>
+          <option value="nubonu">◯ nubonu</option>
+          <option value="nubunu">◯ nubunu</option>
+          <option value="nudanu">◯ nudanu</option>
+          <option value="nudonu">◯ nudonu</option>
+          <option value="nudunu">◯ nudunu</option>
+          <option value="nuganu">◯ nuganu</option>
+          <option value="nugonu">◯ nugonu</option>
+          <option value="nugunu">◯ nugunu</option>
+          <option value="nulanu">◯ nulanu</option>
+          <option value="nulonu">◯ nulonu</option>
+          <option value="nulunu">◯ nulunu</option>
+          <option value="numanu">◯ numanu</option>
+          <option value="numonu">◯ numonu</option>
+          <option value="numunu">◯ numunu</option>
+          <option value="nunanu">◯ nunanu</option>
+          <option value="nunonu">◯ nunonu</option>
+          <option value="nununu">◯ nununu</option>
+          <option value="pahapa">☆ pahapa</option>
+          <option value="pahepa">☆ pahepa</option>
+          <option value="pahipa">☆ pahipa</option>
+          <option value="pakapa">☆ pakapa</option>
+          <option value="pakepa">☆ pakepa</option>
+          <option value="pakipa">☆ pakipa</option>
+          <option value="papapa">☆ papapa</option>
+          <option value="papepa">☆ papepa</option>
+          <option value="papipa">☆ papipa</option>
+          <option value="pasapa">☆ pasapa</option>
+          <option value="pasepa">☆ pasepa</option>
+          <option value="pasipa">☆ pasipa</option>
+          <option value="patapa">☆ patapa</option>
+          <option value="patepa">☆ patepa</option>
+          <option value="patipa">☆ patipa</option>
+          <option value="paxapa">☆ paxapa</option>
+          <option value="paxepa">☆ paxepa</option>
+          <option value="paxipa">☆ paxipa</option>
+          <option value="pehape">☆ pehape</option>
+          <option value="pehepe">☆ pehepe</option>
+          <option value="pehipe">☆ pehipe</option>
+          <option value="pekape">☆ pekape</option>
+          <option value="pekepe">☆ pekepe</option>
+          <option value="pekipe">☆ pekipe</option>
+          <option value="pepape">☆ pepape</option>
+          <option value="pepepe">☆ pepepe</option>
+          <option value="pepipe">☆ pepipe</option>
+          <option value="pesape">☆ pesape</option>
+          <option value="pesepe">☆ pesepe</option>
+          <option value="pesipe">☆ pesipe</option>
+          <option value="petape">☆ petape</option>
+          <option value="petepe">☆ petepe</option>
+          <option value="petipe">☆ petipe</option>
+          <option value="pexape">☆ pexape</option>
+          <option value="pexepe">☆ pexepe</option>
+          <option value="pexipe">☆ pexipe</option>
+          <option value="pihapi">☆ pihapi</option>
+          <option value="pihepi">☆ pihepi</option>
+          <option value="pihipi">☆ pihipi</option>
+          <option value="pikapi">☆ pikapi</option>
+          <option value="pikepi">☆ pikepi</option>
+          <option value="pikipi">☆ pikipi</option>
+          <option value="pipapi">☆ pipapi</option>
+          <option value="pipepi">☆ pipepi</option>
+          <option value="pipipi">☆ pipipi</option>
+          <option value="pisapi">☆ pisapi</option>
+          <option value="pisepi">☆ pisepi</option>
+          <option value="pisipi">☆ pisipi</option>
+          <option value="pitapi">☆ pitapi</option>
+          <option value="pitepi">☆ pitepi</option>
+          <option value="pitipi">☆ pitipi</option>
+          <option value="pixapi">☆ pixapi</option>
+          <option value="pixepi">☆ pixepi</option>
+          <option value="pixipi">☆ pixipi</option>
+          <option value="sahasa">☆ sahasa</option>
+          <option value="sahesa">☆ sahesa</option>
+          <option value="sahisa">☆ sahisa</option>
+          <option value="sakasa">☆ sakasa</option>
+          <option value="sakesa">☆ sakesa</option>
+          <option value="sakisa">☆ sakisa</option>
+          <option value="sapasa">☆ sapasa</option>
+          <option value="sapesa">☆ sapesa</option>
+          <option value="sapisa">☆ sapisa</option>
+          <option value="sasasa">☆ sasasa</option>
+          <option value="sasesa">☆ sasesa</option>
+          <option value="sasisa">☆ sasisa</option>
+          <option value="satasa">☆ satasa</option>
+          <option value="satesa">☆ satesa</option>
+          <option value="satisa">☆ satisa</option>
+          <option value="saxasa">☆ saxasa</option>
+          <option value="saxesa">☆ saxesa</option>
+          <option value="saxisa">☆ saxisa</option>
+          <option value="sehase">☆ sehase</option>
+          <option value="sehese">☆ sehese</option>
+          <option value="sehise">☆ sehise</option>
+          <option value="sekase">☆ sekase</option>
+          <option value="sekese">☆ sekese</option>
+          <option value="sekise">☆ sekise</option>
+          <option value="sepase">☆ sepase</option>
+          <option value="sepese">☆ sepese</option>
+          <option value="sepise">☆ sepise</option>
+          <option value="sesase">☆ sesase</option>
+          <option value="sesese">☆ sesese</option>
+          <option value="sesise">☆ sesise</option>
+          <option value="setase">☆ setase</option>
+          <option value="setese">☆ setese</option>
+          <option value="setise">☆ setise</option>
+          <option value="sexase">☆ sexase</option>
+          <option value="sexese">☆ sexese</option>
+          <option value="sexise">☆ sexise</option>
+          <option value="sihasi">☆ sihasi</option>
+          <option value="sihesi">☆ sihesi</option>
+          <option value="sihisi">☆ sihisi</option>
+          <option value="sikasi">☆ sikasi</option>
+          <option value="sikesi">☆ sikesi</option>
+          <option value="sikisi">☆ sikisi</option>
+          <option value="sipasi">☆ sipasi</option>
+          <option value="sipesi">☆ sipesi</option>
+          <option value="sipisi">☆ sipisi</option>
+          <option value="sisasi">☆ sisasi</option>
+          <option value="sisesi">☆ sisesi</option>
+          <option value="sisisi">☆ sisisi</option>
+          <option value="sitasi">☆ sitasi</option>
+          <option value="sitesi">☆ sitesi</option>
+          <option value="sitisi">☆ sitisi</option>
+          <option value="sixasi">☆ sixasi</option>
+          <option value="sixesi">☆ sixesi</option>
+          <option value="sixisi">☆ sixisi</option>
+          <option value="tahata">☆ tahata</option>
+          <option value="taheta">☆ taheta</option>
+          <option value="tahita">☆ tahita</option>
+          <option value="takata">☆ takata</option>
+          <option value="taketa">☆ taketa</option>
+          <option value="takita">☆ takita</option>
+          <option value="tapata">☆ tapata</option>
+          <option value="tapeta">☆ tapeta</option>
+          <option value="tapita">☆ tapita</option>
+          <option value="tasata">☆ tasata</option>
+          <option value="taseta">☆ taseta</option>
+          <option value="tasita">☆ tasita</option>
+          <option value="tatata">☆ tatata</option>
+          <option value="tateta">☆ tateta</option>
+          <option value="tatita">☆ tatita</option>
+          <option value="taxata">☆ taxata</option>
+          <option value="taxeta">☆ taxeta</option>
+          <option value="taxita">☆ taxita</option>
+          <option value="tehate">☆ tehate</option>
+          <option value="tehete">☆ tehete</option>
+          <option value="tehite">☆ tehite</option>
+          <option value="tekate">☆ tekate</option>
+          <option value="tekete">☆ tekete</option>
+          <option value="tekite">☆ tekite</option>
+          <option value="tepate">☆ tepate</option>
+          <option value="tepete">☆ tepete</option>
+          <option value="tepite">☆ tepite</option>
+          <option value="tesate">☆ tesate</option>
+          <option value="tesete">☆ tesete</option>
+          <option value="tesite">☆ tesite</option>
+          <option value="tetate">☆ tetate</option>
+          <option value="tetete">☆ tetete</option>
+          <option value="tetite">☆ tetite</option>
+          <option value="texate">☆ texate</option>
+          <option value="texete">☆ texete</option>
+          <option value="texite">☆ texite</option>
+          <option value="tihati">☆ tihati</option>
+          <option value="tiheti">☆ tiheti</option>
+          <option value="tihiti">☆ tihiti</option>
+          <option value="tikati">☆ tikati</option>
+          <option value="tiketi">☆ tiketi</option>
+          <option value="tikiti">☆ tikiti</option>
+          <option value="tipati">☆ tipati</option>
+          <option value="tipeti">☆ tipeti</option>
+          <option value="tipiti">☆ tipiti</option>
+          <option value="tisati">☆ tisati</option>
+          <option value="tiseti">☆ tiseti</option>
+          <option value="tisiti">☆ tisiti</option>
+          <option value="titati">☆ titati</option>
+          <option value="titeti">☆ titeti</option>
+          <option value="tititi">☆ tititi</option>
+          <option value="tixati">☆ tixati</option>
+          <option value="tixeti">☆ tixeti</option>
+          <option value="tixiti">☆ tixiti</option>
+          <option value="xahaxa">☆ xahaxa</option>
+          <option value="xahexa">☆ xahexa</option>
+          <option value="xahixa">☆ xahixa</option>
+          <option value="xakaxa">☆ xakaxa</option>
+          <option value="xakexa">☆ xakexa</option>
+          <option value="xakixa">☆ xakixa</option>
+          <option value="xapaxa">☆ xapaxa</option>
+          <option value="xapexa">☆ xapexa</option>
+          <option value="xapixa">☆ xapixa</option>
+          <option value="xasaxa">☆ xasaxa</option>
+          <option value="xasexa">☆ xasexa</option>
+          <option value="xasixa">☆ xasixa</option>
+          <option value="xataxa">☆ xataxa</option>
+          <option value="xatexa">☆ xatexa</option>
+          <option value="xatixa">☆ xatixa</option>
+          <option value="xaxaxa">☆ xaxaxa</option>
+          <option value="xaxexa">☆ xaxexa</option>
+          <option value="xaxixa">☆ xaxixa</option>
+          <option value="xehaxe">☆ xehaxe</option>
+          <option value="xehexe">☆ xehexe</option>
+          <option value="xehixe">☆ xehixe</option>
+          <option value="xekaxe">☆ xekaxe</option>
+          <option value="xekexe">☆ xekexe</option>
+          <option value="xekixe">☆ xekixe</option>
+          <option value="xepaxe">☆ xepaxe</option>
+          <option value="xepexe">☆ xepexe</option>
+          <option value="xepixe">☆ xepixe</option>
+          <option value="xesaxe">☆ xesaxe</option>
+          <option value="xesexe">☆ xesexe</option>
+          <option value="xesixe">☆ xesixe</option>
+          <option value="xetaxe">☆ xetaxe</option>
+          <option value="xetexe">☆ xetexe</option>
+          <option value="xetixe">☆ xetixe</option>
+          <option value="xexaxe">☆ xexaxe</option>
+          <option value="xexexe">☆ xexexe</option>
+          <option value="xexixe">☆ xexixe</option>
+          <option value="xihaxi">☆ xihaxi</option>
+          <option value="xihexi">☆ xihexi</option>
+          <option value="xihixi">☆ xihixi</option>
+          <option value="xikaxi">☆ xikaxi</option>
+          <option value="xikexi">☆ xikexi</option>
+          <option value="xikixi">☆ xikixi</option>
+          <option value="xipaxi">☆ xipaxi</option>
+          <option value="xipexi">☆ xipexi</option>
+          <option value="xipixi">☆ xipixi</option>
+          <option value="xisaxi">☆ xisaxi</option>
+          <option value="xisexi">☆ xisexi</option>
+          <option value="xisixi">☆ xisixi</option>
+          <option value="xitaxi">☆ xitaxi</option>
+          <option value="xitexi">☆ xitexi</option>
+          <option value="xitixi">☆ xitixi</option>
+          <option value="xixaxi">☆ xixaxi</option>
+          <option value="xixexi">☆ xixexi</option>
+          <option value="xixixi">☆ xixixi</option>
+        </select>
+        <div id="gall-img"></div>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <!-- ack -->
+  <div>
+    <div class="row">
+      <div class='col-md-12 col-sm-12 col-xs-12'>
+        <p class='h4 font-weight-bold title'>Acknowledgements</p>
+        <p class="ack">
+          This work was partially supported by the Alon Fellowship. We thank Gal Fiebelman and Taelin
+          Karidi for their helpful feedback.
+        </p>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <!-- citation -->
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <p class="h4 font-weight-bold title">Citation</p>
+      <pre><code>@InProceedings{alper2023kiki-or-bouba,
+  author    = {Morris Alper and Hadar Averbuch-Elor},
+  title     = {Kiki or Bouba? Sound Symbolism in Vision-and-Language Models},
+  booktitle = {Proceedings of Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023}
+}</code></pre>
+    </div>
+  </div>
+
+  <script src="web/gallery.js"></script>
+
+</body>
+
 </html>
